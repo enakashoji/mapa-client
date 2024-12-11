@@ -1,0 +1,10 @@
+<div id="map" style="height: 500px;"></div>
+
+<button (click)="iniciarDesenho()" [disabled]="desenhando">Iniciar Desenho</button>
+<button (click)="finalizarDesenho()" [disabled]="!desenhando || currentPoints.length < 3">
+  Finalizar Desenho
+</button>
+<button (click)="cancelarDesenho()" [disabled]="!desenhando">
+  Cancelar Desenho
+</button>
+<button (click)="gerarMapa()">Gerar Mapa</button>
